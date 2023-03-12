@@ -4,22 +4,52 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .bayan__title {
-  margin: 0;
+  margin: 0 0 25px;
+  font-size: 35px;
+  color: darkcyan;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .bayan {
-  max-width: 500px;
-  margin: 120px auto;
-}
-
-.bayan__faq {
-
+  width: 700px;
+  max-width: 700px;
 }
 
 .bayan__faq-item {
-  margin-bottom: 5px;
-  border-top: 1px solid gray;
+  border-top: 1px solid ;
+  padding: 1rem;
+}
+
+.bayan__faq-label {
+  color: darkcyan;
+  font-size: 20px;
+}
+
+.bayan__faq-item:hover {
+  background-color: aliceblue;
+}
+
+.bayan__faq-input {
+  width: 0;
+  height: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+}
+
+.bayan__faq-input:checked ~ .bayan__faq-text {
+  display: block;
+}
+
+.bayan__faq-text {
+  display: none;
+  padding: 10px 15px;
+  color: darkcyan;
+  font-size: 18px;
 }

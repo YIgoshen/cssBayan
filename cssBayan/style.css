@@ -21,18 +21,32 @@ body {
   max-width: 700px;
 }
 
-.bayan__faq-item {
-  border-top: 1px solid ;
-  padding: 1rem;
+.bayan__faq {
+  border: 1px solid #615546;
+  border-radius: 0.3rem;
+}
+
+
+.bayan__faq-img {
+  display: flex;
+  justify-content: center;
+}
+
+.bayan__faq-img img {
+  width: 150px;
+  height: 150px;
+}
+
+.bayan__faq-item:not(:first-child) {
+  border-top: 1px solid #615546;
 }
 
 .bayan__faq-label {
   color: darkcyan;
   font-size: 20px;
-}
-
-.bayan__faq-item:hover {
-  background-color: aliceblue;
+  display: block;
+  padding: 10px 15px;
+  cursor: pointer;
 }
 
 .bayan__faq-input {
@@ -43,13 +57,16 @@ body {
   position: absolute;
 }
 
-.bayan__faq-input:checked ~ .bayan__faq-text {
+.bayan__faq-input:checked ~ .bayan__faq-img {
   display: block;
 }
 
-.bayan__faq-text {
+.bayan__faq-input:checked ~ .bayan__faq-label {
+  background-color: aqua;
+}
+
+.bayan__faq-img {
   display: none;
   padding: 10px 15px;
-  color: darkcyan;
   font-size: 18px;
 }

@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bayan {
+  width: 90vw;
+  max-width: 700px;
+}
+
+.bayan__faq {
+  border: 1px solid #615546;
+}
+
+.bayan__faq-item:not(:first-child) {
+  border-top: 1px solid #615546;
+}
+
+.bayan__faq i {
+  display: none;
+}
+
+@media (hover: hover), (-ms-high-contrast:none) {
+  .bayan__faq:hover i {
+    display: block;
+  }
+}
+
+.bayan__faq-label {
+  color: darkcyan;
+  font-size: 1.5rem;
+  padding: .7rem 1rem;
+  cursor: pointer;
+}
+
+@media (hover: hover), (-ms-high-contrast:none) {
+  .bayan__faq:hover .bayan__faq-label {
+    color: #615546;
+  }
+}
+
+.bayan__faq-label-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bayan__faq-label-content > span {
+  margin-left: 1rem;
+}
+
+.bayan__faq-label-content > i {
+  margin-right: 1rem;
+}
+
+.bayan__faq-img {
+  display: none;
+  padding: .7rem 1rem;
+  font-size: 1.1rem;
+  justify-content: center;
+  transition: 0s display;
+}
+
+@media (hover: hover), (-ms-high-contrast:none) {
+  .bayan__faq-item:hover .bayan__faq-img {
+    display: flex;
+  }
+}
+
+.bayan__faq-input:checked ~ * > img {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 2s, opacity 1.5s linear;
+}
+
+.bayan__faq-img img {
+  width: 230px;
+  height: 200px;
+}
+
+.bayan__faq-input {
+  width: 0;
+  height: 0;
+  appearance: none;
+  position: absolute;
+}
+
+.bayan__faq-input:checked ~ .bayan__faq-label > .bayan__faq-img {
+  display: flex;
+  transition: all .5s ease-out;
+}
+
+.bayan__faq-input:checked ~ label {
+  color: #615546;
+}
+
+.bayan__faq-input:checked ~ * .bayan__faq-label-content > i {
+  transform: rotate(45deg);
+  transition: all .5s ease-out;
+}
+
+@media (hover: hover), (-ms-high-contrast:none) {
+  .bayan__faq-item:hover i {
+    transform: rotate(45deg);
+    transition: all .5s ease-out;
+  }
+}
+
+.bayan__faq-input:checked ~ .bayan__faq-img {
+  display: flex;
+}
+
+.bayan__faq-label-content span {
+  font-size: 1rem;
+}
+
+.bayan__title {
+  margin: 0 0 2rem;
+  font-size: 1.2rem;
+  color: darkcyan;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (min-width: 768px) {
+  .bayan {
+    width: 700px;
+  }
+  .bayan__faq-label-content span {
+    font-size: 1.2rem;
+  }
+  .bayan__title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bayan__faq-label-content span {
+    font-size: 1.5rem;
+  }
+  .bayan__title {
+    font-size: 2rem;
+  }
+}
+
+@keyframes visibility {
+  0%   {opacity: 0;}
+  33%   {opacity: 0.3;}
+  66%  {opacity: .6;}
+  100% {opacity: 1;}
+}
+
+@keyframes visibility1 {
+  0%   {opacity: 1;}
+  100% {opacity: 1;}
+}
+
+
+@media (hover: hover), (-ms-high-contrast:none) {
+  .bayan__faq-item:hover img {
+    animation: visibility 1s;
+  }
+}

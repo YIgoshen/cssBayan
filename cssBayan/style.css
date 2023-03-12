@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: antiquewhite;
   display: flex;
   align-items: center;
@@ -33,8 +33,8 @@ body {
 }
 
 .bayan__faq-img img {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
 }
 
 .bayan__faq-item:not(:first-child) {
@@ -58,11 +58,11 @@ body {
 }
 
 .bayan__faq-input:checked ~ .bayan__faq-img {
-  display: block;
+  display: flex;
 }
 
 .bayan__faq-input:checked ~ .bayan__faq-label {
-  background-color: aqua;
+  background-color: cornsilk;
 }
 
 .bayan__faq-img {

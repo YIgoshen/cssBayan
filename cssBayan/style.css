@@ -23,9 +23,11 @@ body {
 
 .bayan__faq {
   border: 1px solid #615546;
-  border-radius: 0.3rem;
 }
 
+.bayan__faq-item:hover i {
+  transform: rotate(45deg);
+}
 
 .bayan__faq-img {
   display: flex;
@@ -33,7 +35,7 @@ body {
 }
 
 .bayan__faq-img img {
-  width: 200px;
+  width: 230px;
   height: 200px;
 }
 
@@ -44,7 +46,8 @@ body {
 .bayan__faq-label {
   color: darkcyan;
   font-size: 20px;
-  display: block;
+  display: flex;
+  justify-content: space-between;
   padding: 10px 15px;
   cursor: pointer;
 }
